@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minecraft Blueprint Planner</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" integrity="sha512-qZvrmS2ekKPF2mSZNnMTRoHGYLAhHsFrLCGU_stC8O7lZbJOEgLCeoH5eqiYoT9S8NoL6FArLsgHjM9jWnC_0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link href="https://fonts.cdnfonts.com/css/minecraftia" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Minecraftia', sans-serif;
+      background-color: #37474F; /* Dark stone-like background for the page */
+      color: #ECEFF1; /* Light text for contrast */
+    }
+    /* Custom scrollbar to fit the theme */
+    ::-webkit-scrollbar {
+      width: 12px;
+      height: 12px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #546E7A; /* Darker track */
+      border-radius: 0px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #78909C; /* Lighter thumb */
+      border-radius: 0px;
+      border: 2px solid #455A64;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #90A4AE;
+    }
+    .minecraft-button {
+      background-color: #78909C; /* Stone-like button */
+      border: 2px solid #37474F; /* Darker border */
+      color: #ECEFF1; /* Light text */
+      padding: 8px 16px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      box-shadow: inset 0 -4px #546E7A; /* Inner shadow for 3D effect */
+      transition: background-color 0.1s ease, box-shadow 0.1s ease, transform 0.1s ease;
+    }
+    .minecraft-button:hover {
+      background-color: #90A4AE; /* Lighter on hover */
+      box-shadow: inset 0 -4px #607D8B;
+    }
+    .minecraft-button:active {
+      background-color: #607D8B;
+      box-shadow: inset 0 2px #455A64; /* Pressed effect */
+      transform: translateY(2px);
+    }
+    .minecraft-panel {
+      background-color: #455A64; /* Slightly lighter panel background */
+      border: 3px solid #263238; /* Darkest border for panels */
+      padding: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    }
+    .minecraft-modal-content {
+      background-color: #546E7A; /* Consistent panel color */
+      border: 4px solid #263238;
+      color: #ECEFF1;
+    }
+    /* Ensure pixelated rendering for canvas */
+    canvas {
+      image-rendering: -moz-crisp-edges;
+      image-rendering: -webkit-crisp-edges;
+      image-rendering: pixelated;
+      image-rendering: crisp-edges;
+    }
+  </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react/": "https://esm.sh/react@^19.1.0/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <!--
+    This is where React will inject the app.
+    Ensure this div is present.
+  -->
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
